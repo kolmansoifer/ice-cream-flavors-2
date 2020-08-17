@@ -10,7 +10,8 @@ $("#formArray").submit(function(event) {
   let car = $("input#five").val();
 
   let favorites =[food, pet, drink, music, car];
-  alert(favorites);
+  alert(favorites[2]);
+
   event.preventDefault();
   });
 });
