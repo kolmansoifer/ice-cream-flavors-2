@@ -3,15 +3,14 @@ $("#formArray").submit(function(event) {
   event.preventDefault();
 
 
-  let food = $("input#one").val();
-  let pet = $("input#two").val();
-  let drink = $("input#three").val();
-  let music = $("input#four").val();
-  let car = $("input#five").val();
+  let iceCream1 = $("input#one").val();
+  let iceCream2 = $("input#two").val();
+  let iceCream3 = $("input#three").val();
 
-  let favorites =[food, pet, drink, music, car];
-  alert(favorites[2]);
 
-  event.preventDefault();
+  const favorites =[iceCream1, iceCream2, iceCream3];
+  favorites.forEach(function(flavor) {
+    $("#my-favorites").append(flavor + " is one of my favorite ice cream flavors! ");
+    });
   });
 });
