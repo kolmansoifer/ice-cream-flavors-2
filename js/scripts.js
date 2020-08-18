@@ -8,9 +8,13 @@ $("#formArray").submit(function(event) {
   let iceCream3 = $("input#three").val();
 
 
+  let myFavoriteFlavors = "I love ";
   const favorites =[iceCream1, iceCream2, iceCream3];
-  favorites.forEach(function(flavor) {
-    $("#my-favorites").append(flavor + " is one of my favorite ice cream flavors! ");
-    });
+  let newFavorites = [];
+  for (let i = 0; i < favorites.length; i += 1) {
+    newFavorites.push (myFavoriteFlavors + favorites[i] + " !");
+  }
+  console.log(newFavorites);
+
   });
 });
